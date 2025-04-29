@@ -4,12 +4,13 @@ import br.edu.fatecpg.LoginJava.model.LoginModel;
 import br.edu.fatecpg.LoginJava.view.LoginView;
 
 public class LoginController {
-	private LoginModel loginModel = new LoginModel();
+	private LoginModel loginModel;
 	private LoginView loginView;
 	private boolean logado = false;
 	
-	public LoginController(LoginView loginView) {
+	public LoginController(LoginView loginView, LoginModel loginModel) {
 		this.loginView = loginView;
+		this.loginModel = loginModel;
 	}
 	
 	public void iniciarLogin() {
